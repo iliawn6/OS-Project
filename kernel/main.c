@@ -30,6 +30,7 @@ main()
     fileinit();      // file table
     virtio_disk_init(); // emulated hard disk
     userinit();      // first user process
+      printf("xv6 system memory: %d\n", kfreemem());
     __sync_synchronize();
     started = 1;
   } else {
