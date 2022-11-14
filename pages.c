@@ -9,6 +9,9 @@
 int
 main(int argc, char *argv[])
 {
-    printf("xv6 free pages: %d\n", pages());
+    int freePages = pages();
+    printf("xv6 system memory: 0x80000000 + 128*1024*1024\n");
+    printf("xv6 free pages: %d * 4KB\n", freePages);
+
     exit(0);
 }
